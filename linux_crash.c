@@ -11,9 +11,9 @@ void do_child_work(int pid)
 	{
 	alarm(1);
 	if (kill(getppid(), SIGALRM) == 0)
-		puts("Sygnal zostal wyslany");
+		puts("Signal has been sent");
 	else
-		puts("Nastapil blad z wyslaniem sygnalu");
+		puts("There is an error sending the signal");
 	}
 	exit(0);
 }
